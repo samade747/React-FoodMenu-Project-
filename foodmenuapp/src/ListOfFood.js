@@ -42,13 +42,20 @@ export default function ListOfFood(){
 return (
     <>
     <div style={{ display: 'flex', flexWrap: "wrap", justifyContent: "center"}}>
-        
-
-
-    </div>  
-    </>
-)
-
+        {foodList.map((food) => (
+                    <div style={{width:"34%", display:"flex", justifyContent:"center"}}>
+                        <Food foodDetail={food} />
+                    </div>
+                ))}
+            </div>
+            <div style={{textAlign:"center"}}>
+               <p>We're open until 22:00. Come visit us or order online.</p>
+               <button style={{padding:"8px 14px",border:"none", backgroundColor:"#efcc00 ", fontFamily:"sans-serif"}}>Order now</button>
+               <br/>
+               <br/>
+            </div>
+      </>
+   )
 }
 
 
